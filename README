@@ -1,0 +1,2 @@
+This was built in the Intellij IDEA, The .idea files are included in this so if someone pulls this you will need to remove them if you are on another IDEA.
+This is a maven javafx project with sqlite database.
