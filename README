@@ -1,2 +1,3 @@
 This was built in the Intellij IDEA, The .idea files are included in this so if someone pulls this you will need to remove them if you are on another IDEA.
-This is a maven javafx project with sqlite database.
+This is a maven javafx project with sqlite database. has Create Read and Update functionality for the database. Can add users books, check out books.
+See which books are checked out. Get a due price once a book is checked in. I have not added a delete functionality for users or books yet.
