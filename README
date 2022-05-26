@@ -8,3 +8,6 @@ Features:
     Allows the librarian to return a book from a user.
     Allows the librarian to look at each individuals users details including, books checked out and balance due.
     Allows the librarian to look at every book checked out to users.
+
+To run this make you sure you java JDK 16.2 or above installed. will not run on later versions
+
