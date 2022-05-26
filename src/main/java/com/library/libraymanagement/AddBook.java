@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,7 +22,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class AddBook {
+public class AddBook implements Initializable {
     @FXML
     private Button btnRegister;
     @FXML private ListView<String> lstViewPublisher;
@@ -59,7 +60,7 @@ public class AddBook {
     }
 
     public void bookAddedDialog (ActionEvent event) throws IOException {
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("../../../../../resources/com/gui/librarymanagement/userAddedDialog.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("userAddedDialog.fxml"));
         Parent root = loader.load(); // this loads the FXML file,calls initialize
         userAddedDialog controller = loader.getController(); // get handle on controller class instance.
         controller.initData2(dataToBePassed,this); //call appropriate method

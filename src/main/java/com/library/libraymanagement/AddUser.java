@@ -3,6 +3,7 @@ package com.library.libraymanagement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -18,7 +19,7 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class AddUser {
+public class AddUser implements Initializable {
     @FXML
     private Button btnRegister;
     @FXML private RadioButton rdoStudent;
@@ -86,7 +87,7 @@ public class AddUser {
     // This method pops up the userAddedDialog window
     public void userAddedDialog (ActionEvent event) throws IOException {
         // get the fmxl file for the loader
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("../../../../../resources/com/gui/librarymanagement/userAddedDialog.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("userAddedDialog.fxml"));
         Parent root = loader.load(); // this loads the FXML file,calls initialize
         userAddedDialog controller = loader.getController(); // get handle on controller class instance.
         controller.initData(dataToBePassed,this); //call appropriate method

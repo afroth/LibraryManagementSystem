@@ -28,7 +28,7 @@ public class ReturnBook implements Initializable {
     @FXML private Label lblBookSearch;
     @FXML private Label lblStatus;
 
-    private ObservableList<Book> bookList;
+    private ObservableList bookList;
 
     // fires upon click of btnReturnBook
     @FXML void returnBookAction(ActionEvent event) throws SQLException {
@@ -76,10 +76,9 @@ public class ReturnBook implements Initializable {
             // clears the list view to refresh
             listViewBookSearch.getItems().clear();
             // setting search keyword as selected
-            String searchKeyWord = selected;
             // sending search keyword in method call getBooks()
             try {
-                getBooks(Main.library.bookSearch(searchKeyWord));
+                getBooks(Main.library.bookSearch(selected));
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
@@ -105,7 +104,7 @@ public class ReturnBook implements Initializable {
             //storing value in issued based on whether or not book was returned
             issued = Main.library.returnBook(bookId);
             // if book was successfully returned set lblStatus to lightgreen
-            if(issued == true){lblStatus.setTextFill(Color.LIGHTGREEN);}
+            if(issued){lblStatus.setTextFill(Color.LIGHTGREEN);}
             // book was not successfully returned set lblStatus color to red
             else{lblStatus.setTextFill(Color.RED);}
             // return msgLog as strings from getLog().
