@@ -10,4 +10,11 @@ Features:
     Allows the librarian to look at every book checked out to users.
 
 To run this make you sure you java JDK 16.2 or above installed. will not run on later versions
+    Clone the repository or download.
+    navigate in the command line to the location you have the project saved to 
+    run the following commands
+        cd LibraryManagementSystem\out\artifacts\LibrayManagement_jar
+        java -jar LibrayManagement.jar
+That should do the trick. I added some photos incase you are in a hurry and dont have time to run the project
+
 
